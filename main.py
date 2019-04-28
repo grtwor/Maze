@@ -21,6 +21,7 @@ class Grid:
                     self.screen.blit(player.img, (x, y))
                 start_exit(player,self)
 
+
         for row in range(10):
             for col in range(18):
                  self.grid[row][col].show = False
@@ -46,6 +47,8 @@ class Grid:
                 self.screen.blit(LEVER_O_C, (l[0], l[1]))
                 player.doors_exit = DOORS_3_O
                 self.grid[8][11].status = 'door_o'
+            elif self.grid[row][col].status == 'door_o':
+                player.doors_exit = DOORS_3_IN
             self.grid[row][col].show = True
 
         if (self.isValid(row - 1, col) == True):
@@ -80,6 +83,8 @@ class Grid:
                 self.screen.blit(LEVER_C, (l[0], l[1]))
             elif (self.grid[row][col + 1].status == 'levero'):
                 self.screen.blit(LEVER_O, (l[0], l[1]))
+            elif (self.grid[row][col+1].status == 'door_o'):
+                self.screen.blit(DOORS_3_O, (l[0],l[1]))
             self.grid[row][col+1].show = True
 
         if (self.isValid(row, col-1) == True):
@@ -189,6 +194,15 @@ class Main:
                     player.move(grid)
             grid.draw(player)
             pygame.display.update()
+            # exit doors 1
+            if player.cords == [9,14]:
+                import time
+                time.sleep(1)
+                setup2(field,player)
+            # exit doors 3
+            elif player.end_cords == [8,11]:
+                setup3(field,player)
+
         pygame.quit()
 
 

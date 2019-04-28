@@ -5,119 +5,126 @@ from main import *
 WINDOW = [1000,600]
 WIDTH = 30
 MARGIN = 1
+
 BACKGROUND = pygame.image.load('backgrounds/maze1.png')
 
 #--------WALLS--------#
 WALL = pygame.image.load('wall/wall.png')
 WALL = pygame.transform.scale(WALL, (WIDTH, WIDTH))
 
-W_D = pygame.image.load('wall/w_d.png')
+W_D = pygame.image.load('wall/blue/w_d.png')
 W_D = pygame.transform.scale(W_D, (WIDTH, WIDTH))
 
-W_R = pygame.image.load('wall/w_r.png')
+W_R = pygame.image.load('wall/blue/w_r.png')
 W_R = pygame.transform.scale(W_R, (WIDTH, WIDTH))
 
-W_T = pygame.image.load('wall/w_t.png')
+W_T = pygame.image.load('wall/blue/w_t.png')
 W_T = pygame.transform.scale(W_T, (WIDTH, WIDTH))
 
-W_L = pygame.image.load('wall/w_l.png')
+W_L = pygame.image.load('wall/blue/w_l.png')
 W_L = pygame.transform.scale(W_L, (WIDTH, WIDTH))
 
-W_L_B = pygame.image.load('wall/w_l_b.png')
+W_L_B = pygame.image.load('wall/blue/w_l_b.png')
 W_L_B = pygame.transform.scale(W_L_B, (WIDTH, WIDTH))
 
-W_R_B = pygame.image.load('wall/w_r_b.png')
+W_R_B = pygame.image.load('wall/blue/w_r_b.png')
 W_R_B = pygame.transform.scale(W_R_B, (WIDTH, WIDTH))
 
-W_T_R = pygame.image.load('wall/w_t_r.png')
+W_T_R = pygame.image.load('wall/blue/w_t_r.png')
 W_T_R = pygame.transform.scale(W_T_R, (WIDTH, WIDTH))
 
-W_T_L = pygame.image.load('wall/w_t_l.png')
+W_T_L = pygame.image.load('wall/blue/w_t_l.png')
 W_T_L = pygame.transform.scale(W_T_L, (WIDTH, WIDTH))
 
 #--------DOORS--------#
-DOORS_START = pygame.image.load('doors/doors_start.png')
+DOORS_START = pygame.image.load('doors/blue/doors_start.png')
 DOORS_START = pygame.transform.scale(DOORS_START, (WIDTH, WIDTH))
 
 DOORS_1 = pygame.image.load('doors/doors1.png')
 DOORS_1 = pygame.transform.scale(DOORS_1, (WIDTH, WIDTH))
 
-DOORS_3_C = pygame.image.load('doors/d3_closed.png')
+DOORS_3_C = pygame.image.load('doors/blue/d3_closed.png')
 DOORS_3_C = pygame.transform.scale(DOORS_3_C, (WIDTH, WIDTH))
 
-DOORS_3_O = pygame.image.load('doors/d3_opened.png')
+DOORS_3_IN = pygame.image.load('doors/blue/d3_in.png')
+DOORS_3_IN = pygame.transform.scale(DOORS_3_IN, (WIDTH, WIDTH))
+
+DOORS_3_O = pygame.image.load('doors/blue/d3_opened.png')
 DOORS_3_O = pygame.transform.scale(DOORS_3_O, (WIDTH, WIDTH))
 
-DOORS_3_O_R = pygame.image.load('doors/d3_opened_r.png')
+DOORS_3_O_R = pygame.image.load('doors/blue/d3_opened_r.png')
 DOORS_3_O_R = pygame.transform.scale(DOORS_3_O_R, (WIDTH, WIDTH))
 
-GDOORS_UP = pygame.image.load('doors/glow_d_up.png')
+DOORS_3_C_R = pygame.image.load('doors/blue/d3_closed_r.png')
+DOORS_3_C_R = pygame.transform.scale(DOORS_3_C_R, (WIDTH, WIDTH))
+
+GDOORS_UP = pygame.image.load('doors/blue/glow_d_up.png')
 GDOORS_UP = pygame.transform.scale(GDOORS_UP, (WIDTH, WIDTH))
 
-GDOORS_DOWN = pygame.image.load('doors/doors2.png')
+GDOORS_DOWN = pygame.image.load('doors/blue/doors2.png')
 GDOORS_DOWN = pygame.transform.scale(GDOORS_DOWN, (WIDTH, WIDTH))
 
-GDOORS_RIGHT = pygame.image.load('doors/glow_d_right.png')
+GDOORS_RIGHT = pygame.image.load('doors/blue/glow_d_right.png')
 GDOORS_RIGHT= pygame.transform.scale(GDOORS_RIGHT, (WIDTH, WIDTH))
 
 #--------FLOORS--------#
 FLOOR = pygame.image.load('floor/floor.png')
 FLOOR = pygame.transform.scale(FLOOR, (WIDTH, WIDTH))
 
-GFLOOR_L_B = pygame.image.load('floor/glow_f_b_l.png')
+GFLOOR_L_B = pygame.image.load('floor/blue/glow_f_b_l.png')
 GFLOOR_L_B = pygame.transform.scale(GFLOOR_L_B, (WIDTH, WIDTH))
 
-GFLOOR_R_B = pygame.image.load('floor/glow_f_b_r.png')
+GFLOOR_R_B = pygame.image.load('floor/blue/glow_f_b_r.png')
 GFLOOR_R_B = pygame.transform.scale(GFLOOR_R_B, (WIDTH, WIDTH))
 
-GFLOOR_T_L = pygame.image.load('floor/glow_f_t_l.png')
+GFLOOR_T_L = pygame.image.load('floor/blue/glow_f_t_l.png')
 GFLOOR_T_L = pygame.transform.scale(GFLOOR_T_L, (WIDTH, WIDTH))
 
-GFLOOR_T_R = pygame.image.load('floor/glow_f_t_r.png')
+GFLOOR_T_R = pygame.image.load('floor/blue/glow_f_t_r.png')
 GFLOOR_T_R = pygame.transform.scale(GFLOOR_T_R, (WIDTH, WIDTH))
 
-GFLOOR_CENTER = pygame.image.load('floor/glow_f_center.png')
+GFLOOR_CENTER = pygame.image.load('floor/blue/glow_f_center.png')
 GFLOOR_CENTER = pygame.transform.scale(GFLOOR_CENTER, (WIDTH, WIDTH))
 
-GFLOOR_LEFT = pygame.image.load('floor/glow_f_left.png')
+GFLOOR_LEFT = pygame.image.load('floor/blue/glow_f_left.png')
 GFLOOR_LEFT = pygame.transform.scale(GFLOOR_LEFT, (WIDTH, WIDTH))
 
-GFLOOR_RIGHT = pygame.image.load('floor/glow_f_right.png')
+GFLOOR_RIGHT = pygame.image.load('floor/blue/glow_f_right.png')
 GFLOOR_RIGHT = pygame.transform.scale(GFLOOR_RIGHT, (WIDTH, WIDTH))
 
-GFLOOR_UP = pygame.image.load('floor/glow_f_up.png')
+GFLOOR_UP = pygame.image.load('floor/blue/glow_f_down.png')
 GFLOOR_UP = pygame.transform.scale(GFLOOR_UP, (WIDTH, WIDTH))
 
-GFLOOR_DOWN = pygame.image.load('floor/glow_f_down.png')
+GFLOOR_DOWN = pygame.image.load('floor/blue/glow_f_up.png')
 GFLOOR_DOWN = pygame.transform.scale(GFLOOR_DOWN, (WIDTH, WIDTH))
 
 #--------PLAYER---------#
-PLAYER_UP = pygame.image.load('hero/dwarf_up.png')
+PLAYER_UP = pygame.image.load('hero/mage/mage_up.png')
 PLAYER_UP = pygame.transform.scale(PLAYER_UP, (WIDTH, WIDTH))
 
-PLAYER_DOWN = pygame.image.load('hero/dwarf_down.png')
+PLAYER_DOWN = pygame.image.load('hero/mage/mage_d.png')
 PLAYER_DOWN = pygame.transform.scale(PLAYER_DOWN, (WIDTH, WIDTH))
 
-PLAYER_LEFT = pygame.image.load('hero/dwarf_left.png')
+PLAYER_LEFT = pygame.image.load('hero/mage/mage_l.png')
 PLAYER_LEFT = pygame.transform.scale(PLAYER_LEFT, (WIDTH, WIDTH))
 
-PLAYER_RIGHT = pygame.image.load('hero/dwarf_right.png')
+PLAYER_RIGHT = pygame.image.load('hero/mage/mage_r.png')
 PLAYER_RIGHT = pygame.transform.scale(PLAYER_RIGHT, (WIDTH, WIDTH))
 
 #--------ITEMS---------#
-LEVER_C = pygame.image.load('items/lever_closed.png')
+LEVER_C = pygame.image.load('items/blue/lever_closed.png')
 LEVER_C = pygame.transform.scale(LEVER_C, (WIDTH, WIDTH))
 
-LEVER_O = pygame.image.load('items/lever_opened.png')
+LEVER_O = pygame.image.load('items/blue/lever_opened.png')
 LEVER_O = pygame.transform.scale(LEVER_O, (WIDTH, WIDTH))
 
-LEVER_O_C = pygame.image.load('items/lever_opened_c.png')
+LEVER_O_C = pygame.image.load('items/blue/lever_opened_c.png')
 LEVER_O_C = pygame.transform.scale(LEVER_O_C, (WIDTH, WIDTH))
 
-LEVER_C_R = pygame.image.load('items/lever_closed_r.png')
+LEVER_C_R = pygame.image.load('items/blue/lever_closed_r.png')
 LEVER_C_R = pygame.transform.scale(LEVER_C_R, (WIDTH, WIDTH))
 
-LEVER_O_R = pygame.image.load('items/lever_opened_r.png')
+LEVER_O_R = pygame.image.load('items/blue/lever_opened_r.png')
 LEVER_O_R = pygame.transform.scale(LEVER_O_R, (WIDTH, WIDTH))
 
 #---------COLORS--------#
@@ -148,7 +155,7 @@ def setup1(field, player):
     player.cords = [1,0] #start player cords
     player.start_cords = [1, 0] #start door cords
     player.end_cords = [9,14] #end door cords
-    player.doors_exit = DOORS_3_C
+    player.doors_exit = DOORS_START
     field[1][0].status = 'empty'
     field[0][0].status = 'wall'
     field[0][1].status = 'wall'
@@ -448,6 +455,7 @@ def setup3(field,player):
     pass
 
 def start_exit(player,grid):
+    import time
     # start doors 1
     if (player.start_cords[0] == player.cords[0]) and (player.start_cords[1] == player.cords[1]):
         grid.screen.blit(DOORS_START, [((MARGIN + WIDTH) * player.start_cords[1] + MARGIN) + 215,
@@ -459,25 +467,33 @@ def start_exit(player,grid):
     elif (player.start_cords[0] == player.cords[0]-1) and (player.start_cords[1] == player.cords[1]):
         grid.screen.blit(GDOORS_DOWN, [((MARGIN + WIDTH) * player.start_cords[1] + MARGIN) + 215,
                                         ((MARGIN + WIDTH) * player.start_cords[0] + MARGIN) + 170])
-    # exit doors 1
+
+    # exit doors
     if (player.end_cords[0] == player.cords[0]) and (player.end_cords[1] == player.cords[1]):
         grid.screen.blit(player.doors_exit, [((MARGIN + WIDTH) * player.end_cords[1] + MARGIN) + 215,
                                        ((MARGIN + WIDTH) * player.end_cords[0] + MARGIN) + 170])
-        if player.end_cords == [9,14]:
-            setup2(field,player)
-        elif player.end_cords == [8,11]:
-            setup3(field,player)
+
+
+
+
 
     elif (player.end_cords[0]-1 == player.cords[0]) and (player.end_cords[1] == player.cords[1]):
         grid.screen.blit(GDOORS_UP, [((MARGIN + WIDTH) * player.end_cords[1] + MARGIN) + 215,
                                      ((MARGIN + WIDTH) * player.end_cords[0] + MARGIN) + 170])
-    #exit doors 3
+    # exit doors 3
     elif (player.end_cords[0] == player.cords[0]) and (player.end_cords[1] == player.cords[1]+1):
         if player.doors_exit == DOORS_3_C:
             grid.screen.blit(DOORS_3_C, [((MARGIN + WIDTH) * player.end_cords[1] + MARGIN) + 215,
                                          ((MARGIN + WIDTH) * player.end_cords[0] + MARGIN) + 170])
         elif player.doors_exit == DOORS_3_O:
             grid.screen.blit(DOORS_3_O, [((MARGIN + WIDTH) * player.end_cords[1] + MARGIN) + 215,
+                                         ((MARGIN + WIDTH) * player.end_cords[0] + MARGIN) + 170])
+    elif (player.end_cords[0] == player.cords[0]+1) and (player.end_cords[1] == player.cords[1] + 1):
+        if player.doors_exit == DOORS_3_C:
+            grid.screen.blit(DOORS_3_C_R, [((MARGIN + WIDTH) * player.end_cords[1] + MARGIN) + 215,
+                                         ((MARGIN + WIDTH) * player.end_cords[0] + MARGIN) + 170])
+        elif player.doors_exit == DOORS_3_O:
+            grid.screen.blit(DOORS_3_O_R, [((MARGIN + WIDTH) * player.end_cords[1] + MARGIN) + 215,
                                          ((MARGIN + WIDTH) * player.end_cords[0] + MARGIN) + 170])
 
 
